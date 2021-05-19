@@ -22,10 +22,10 @@
 body {
     background-color: var(--very-dark-blue);
     color: white;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    margin: 0;
-    place-items: center center;
     font-size: 15px;
 }
 

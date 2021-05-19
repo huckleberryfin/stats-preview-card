@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --sl-tr-wh: hsla(0, 0%, 100%, 0.75);
+    --vsl-tr-wh: hsla(0, 0%, 100%, 0.6);
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    color: white;
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    place-items: center center;
+    font-size: 15px;
+}
+
+.main-container {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0 2rem;
+}
+
+.content {
+    text-align: center;
+    background-color: var(--dark-desaturated-blue);
+    padding: 5rem 2rem;
+    border-radius: 2rem 0 0 2rem;
+    flex-basis: 100%;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 3rem;
+}
+
+.image {
+    flex-basis: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.img_hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 2rem 2rem 0;
+    overflow: hidden;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+    /* bottom: 0; */
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #AA64D1;
+    opacity: .5;
+    overflow: hidden;
+    border-radius: 0 2rem 2rem 0;
+    
+}
+
+span {
+    color: var(--soft-violet);
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--vsl-tr-wh);
+}
+
+.specs {
+    display: flex;
+}
+
+.fact {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.fact > h1 {
+    padding-top: 5rem;
+    padding-bottom: .5rem;
+}
+
+.fact > span {
+    color: var(--vsl-tr-wh);
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        flex-direction: column;
+        margin: 2rem 2rem 2rem 2rem;
+    }
+
+    image {
+        order: 1;
+    }
+
+    .content {
+        order: 2;
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .img_hero {
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .image::after {
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .specs {
+        flex-direction: column;
+    }
+
+
+}
